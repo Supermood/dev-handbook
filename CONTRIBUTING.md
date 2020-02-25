@@ -49,3 +49,33 @@ Complete the form.
 4. Apply form
 
 ![alt text](images/create_pull_request.png "txt test")
+
+## Commit Message Guidelines
+
+We define how to name and format our commits in order to have a clean **project history**, because it is more readable and because wee use the commit messages to **generate our release log**.
+
+### Commit Message Format
+
+Each commit message has a **type**, an optional **scope** and a **subject**:
+
+```
+<type>(<scope>): <subject>
+```
+
+Sample
+```
+docs: add commit message format guidelines to the contributing guide
+```
+
+### Type
+Must be one of the following:
+
+* **build**: Changes that affect the build system or external dependencies
+* **ci**: Changes to our CI configuration files and scripts
+* **docs**: Documentation only changes
+* **feat**: A new feature
+* **fix**: A bug fix
+* **perf**: A code change that improves performance
+* **refactor**: A code change that neither fixes a bug nor adds a feature
+* **style**: Changes that do not affect the meaning of the code (white-space, formatting, etc)
+* **test**: Adding missing tests or correcting existing tests

@@ -56,10 +56,10 @@ We define how to name and format our commits in order to have a clean **project 
 
 ### Commit Message Format
 
-Each commit message has a **type**, an optional **scope** and a **subject**:
+Each commit message has a **type** and a **subject**:
 
 ```
-<type>(<scope>): <subject>
+<type>: <subject>
 ```
 
 Sample

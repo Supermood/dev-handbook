@@ -2,10 +2,11 @@
 
 << [Home](/README.md)
 
-[Ask questions](#ask-questions)
-[Suggest improvements or add clarifications](#suggest-improvements-or-add-clarifications)
-[Commit Message Guidelines](#commit-message-guidelines)
-[Coding Standards](#coding-standards)
+
+ - [Ask questions](#ask-questions)
+ - [Suggest improvements or add clarifications](#suggest-improvements-or-add-clarifications)
+ - [Commit Message Guidelines](#commit-message-guidelines)
+ - [Coding Standards](#coding-standards)
 
 ## Ask questions
 
@@ -94,14 +95,26 @@ We use the [PSR-2 Coding Style Guide](https://www.php-fig.org/psr/psr-2/)
 
 #### Strings
 
-For `strings`, we use single quotes or double quotes depending on the context. If we do not need to include dynamic content in the string, we use single quotes (`'`), such as
+For strings, we use single quotes or double quotes depending on the context. If we do not need to include dynamic content in the string, we use single quotes (`'`), such as
 
-    $email = $request->get('email');
+```php
+$email = $request->get('email');
+```
 
 But if we need to include a `$variable` in a string, then we use double quotes (`"`)
 
-	$email = 'alice@example.com';
-    $error = "The email $email was not found";
+```php
+$email = 'alice@example.com';
+$error = "The email $email was not found";
+```
 
-And we always use the [simple interpolation syntax](https://www.php.net/manual/en/language.types.string.php#language.types.string.parsing.simple) and never [complex interpolation](https://www.php.net/manual/en/language.types.string.php#language.types.string.parsing.complex). If you need to add complex expressions, render them to a properly named variable before adding it with the help of simple interpolation.
+In case we need to escape values (because we use " or ' inside the string) we then use the one that requires the least escaping.
+
+```php
+$message = "There's been an error";
+$message = 'There has been an "error"';
+$message = "There has been an error in the \"$componentName\" component"; // because we need to interpolate
+```
+
+We always use the [simple interpolation syntax](https://www.php.net/manual/en/language.types.string.php#language.types.string.parsing.simple) and never [complex interpolation](https://www.php.net/manual/en/language.types.string.php#language.types.string.parsing.complex). If you need to add complex expressions, render them to a properly named variable before adding it with the help of simple interpolation.
 

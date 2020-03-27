@@ -52,7 +52,7 @@ Complete the form.
 
 ## Commit Message Guidelines
 
-We define how to name and format our commits in order to have a clean **project history**, because it is more readable and because wee use the commit messages to **generate our release log**.
+We define how to name and format our commits in order to have a clean **project history**, because it is more readable and because we use the commit messages to **generate our release log**.
 
 ### Commit Message Format
 
